@@ -1,0 +1,28 @@
+Explanation of Steps in the Script:
+
+    Navigate to the Homepage:
+        The script uses driver.get("https://www.fitpeo.com"); to open the FitPeo homepage.
+
+    Navigate to Revenue Calculator:
+        It finds the link to the Revenue Calculator page by locating it through By.linkText("Revenue Calculator") and clicks it.
+
+    Scroll Down to Slider Section:
+        The script uses executeScript to scroll down to the slider section.
+
+    Adjust the Slider:
+        It uses JavaScript to set the slider value to 820. You can move the slider using executeScript("arguments[0].value = 820;", slider);.
+
+    Update the Text Field:
+        The script clears the current value in the text field and enters 560 in it using textField.sendKeys("560");.
+
+    Validate Slider Value:
+        It waits until the slider value updates to 560 after the text field is updated.
+
+    Select CPT Codes:
+        The script finds and clicks the checkboxes for CPT codes 99091, 99453, 99454, and 99474.
+
+    Validate Total Recurring Reimbursement:
+        It waits until the header shows the expected total value, $110700.
+
+    Close the Browser:
+        The browser is closed at the end of the script using driver.quit().
